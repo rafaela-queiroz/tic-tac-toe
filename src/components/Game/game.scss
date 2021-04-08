@@ -1,0 +1,56 @@
+.game {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: calc(100vh - 40px);
+  align-items: center;
+
+  .game-info {
+    .status {
+      font-family: 'Dela Gothic One', cursive;
+      font-size: 25px;
+      text-align: center;
+    }
+
+    ol {
+      list-style: none;
+      text-align: center;
+      padding: 0;
+
+      button {
+        border: 0;
+        outline: none;
+        padding: 7px 15px;
+        margin-bottom: 1px;
+        background: #bfedfe;
+        transition: 0.4s;
+
+        &:hover{
+          transform: scale(1.05);
+          opacity: 0.7;
+        }
+      }
+    }
+  }
+
+  .game-board {
+    margin: 40px 0;
+    user-select: none;
+  }
+
+  .restart {
+    width: 210px;
+    border: 0;
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 10px 20px;
+    cursor: pointer;
+    background: #2086d9;
+    color: #fff;
+    font-weight: 700;
+    margin: 10px 0;
+    float: right;
+    transition: 0.5s;
+    outline: none;
+  }
+}

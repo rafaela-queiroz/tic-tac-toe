@@ -1,0 +1,1 @@
+export const DEU_VELHA = 'Deu velha!';
