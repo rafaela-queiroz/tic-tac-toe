@@ -1,4 +1,4 @@
-import { DEU_VELHA } from './constants';
+import { DEU_VELHA } from "./constants";
 
 export function calculateWinner(squares, players) {
   const lines = [
@@ -16,9 +16,9 @@ export function calculateWinner(squares, players) {
     const [a, b, c] = lines[i];
 
     if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
-      return squares[a] === 'X' ? players[0] : players[1];
+      return squares[a] === "X" ? players[0] : players[1];
     }
   }
 
-  return squares.every(item => item) ? DEU_VELHA : null;
+  return squares.every((item) => item) ? DEU_VELHA : null;
 }

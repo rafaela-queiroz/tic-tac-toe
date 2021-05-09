@@ -1,14 +1,12 @@
-import React, { useState, useEffect } from 'react';
-import { DEU_VELHA } from '../../utils/constants';
-import './scoreboard.scss';
+import React, { useEffect, useState } from "react";
+import { DEU_VELHA } from "../../utils/constants";
+import "./scoreboard.scss";
 
 const Scoreboard = ({ player1, player2, winner }) => {
   const [results, setResults] = useState({ player1: 0, player2: 0, ties: 0 });
 
   useEffect(() => {
     if (winner) {
-
-      console.log('existe winner');
       switch (winner) {
         case player1:
           setResults({ ...results, player1: results.player1 + 1 });
@@ -23,8 +21,6 @@ const Scoreboard = ({ player1, player2, winner }) => {
     }
   }, [winner]);
 
-  console.log('results', results);
-
   return (
     <div className="scoreboard">
       <div className="results">
@@ -33,7 +29,7 @@ const Scoreboard = ({ player1, player2, winner }) => {
           <h1>{results.player1}</h1>
         </div>
         <div>
-          <span>EMPATE</span>
+          <span>EMPATES</span>
           <h1>{results.ties}</h1>
         </div>
         <div>
@@ -43,6 +39,6 @@ const Scoreboard = ({ player1, player2, winner }) => {
       </div>
     </div>
   );
-}
+};
 
 export default Scoreboard;

@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import './player.scss';
+import React, { useState } from "react";
+import "./player.scss";
 
 const Player = (props) => {
-  const [player1, setPlayer1] = useState('');
-  const [player2, setPlayer2] = useState('');
+  const [player1, setPlayer1] = useState("");
+  const [player2, setPlayer2] = useState("");
 
   return (
     <>
@@ -15,7 +15,7 @@ const Player = (props) => {
               type="text"
               name="player1"
               placeholder="Jogador 1"
-              onChange={event => setPlayer1(event.target.value)}
+              onChange={(event) => setPlayer1(event.target.value)}
             />
           </div>
           <div className="player">
@@ -24,7 +24,7 @@ const Player = (props) => {
               type="text"
               name="player2"
               placeholder="Jogador 2"
-              onChange={event => setPlayer2(event.target.value)}
+              onChange={(event) => setPlayer2(event.target.value)}
             />
           </div>
           <button
@@ -38,6 +38,6 @@ const Player = (props) => {
       </div>
     </>
   );
-}
+};
 
 export default Player;

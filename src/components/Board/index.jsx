@@ -1,6 +1,6 @@
-import React from 'react';
-import Square from '../Square';
-import './board.scss';
+import React from "react";
+import Square from "../Square";
+import "./board.scss";
 
 const Board = (props) => {
   const renderSquare = (i) => {
@@ -11,7 +11,7 @@ const Board = (props) => {
         onClick={() => props.onClick(i)}
       />
     );
-  }
+  };
 
   return (
     <>
@@ -32,6 +32,6 @@ const Board = (props) => {
       </div>
     </>
   );
-}
+};
 
 export default Board;
