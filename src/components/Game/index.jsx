@@ -122,13 +122,12 @@ export default class Game extends Component {
                 onClick={(i) => this.handleClick(i)}
               />
             </div>
-            {winner ? (
-              <button className="restart" onClick={this.handleRestart}>
-                Jogar de novo
-              </button>
-            ) : (
-              ""
-            )}
+            <button
+              className={winner ? "restart" : "invisible"}
+              onClick={this.handleRestart}
+            >
+              Jogar de novo
+            </button>
           </div>
         ) : (
           <Player

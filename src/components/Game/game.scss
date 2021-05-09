@@ -2,8 +2,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: calc(100vh - 40px);
   align-items: center;
+  padding-top: 40px;
 
   .game-info {
     .status {
@@ -25,7 +25,7 @@
         background: #bfedfe;
         transition: 0.4s;
 
-        &:hover{
+        &:hover {
           transform: scale(1.05);
           opacity: 0.7;
         }
@@ -52,5 +52,10 @@
     float: right;
     transition: 0.5s;
     outline: none;
+    visibility: visible;
   }
+}
+
+.invisible {
+  visibility: hidden;
 }
