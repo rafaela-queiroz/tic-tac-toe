@@ -17,6 +17,8 @@ const Scoreboard = ({ player1, player2, winner }) => {
         case DEU_VELHA:
           setResults({ ...results, ties: results.ties + 1 });
           break;
+        default:
+          return;
       }
     }
   }, [winner]);

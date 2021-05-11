@@ -82,17 +82,6 @@ export default class Game extends Component {
         ])
       : null;
 
-    const moves = history.map((step, move) => {
-      if (move) {
-        const desc = `Voltar para a jogada ${move}`;
-        return (
-          <li key={move}>
-            <button onClick={() => this.jumpTo(move)}>{desc}</button>
-          </li>
-        );
-      }
-    });
-
     let status;
 
     if (winner) {
@@ -114,7 +103,6 @@ export default class Game extends Component {
             />
             <div className="game-info">
               <div className="status">{status}</div>
-              {/* <ol>{moves}</ol> */}
             </div>
             <div className="game-board">
               <Board
