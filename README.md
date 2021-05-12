@@ -2,6 +2,11 @@
 
 A Tic-Tac-Toe game built with React to study.
 
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/42815135/117901486-d2bccf00-b2a1-11eb-80a5-1acb37257c08.gif">
+</p>
+
+
 # 🚀 Technologies
 
 - Javascript
