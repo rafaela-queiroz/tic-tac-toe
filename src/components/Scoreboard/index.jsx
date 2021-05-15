@@ -8,17 +8,15 @@ const Scoreboard = ({ player1, player2, winner }) => {
   useEffect(() => {
     if (winner) {
       switch (winner) {
-        case player1:
+        case "X":
           setResults({ ...results, player1: results.player1 + 1 });
           break;
-        case player2:
+        case "O":
           setResults({ ...results, player2: results.player2 + 1 });
           break;
         case DEU_VELHA:
           setResults({ ...results, ties: results.ties + 1 });
           break;
-        default:
-          return;
       }
     }
   }, [winner]);
