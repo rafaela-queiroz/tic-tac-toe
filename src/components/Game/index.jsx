@@ -83,13 +83,22 @@ export default class Game extends Component {
       : null;
 
     let status;
+    let scoreboardWinner;
 
     if (winner) {
-      status = winner !== DEU_VELHA ? `Parabéns, ${winner} venceu!` : DEU_VELHA;
+      if (winner !== DEU_VELHA) {
+        status = `Parabéns, ${winner} venceu!`;
+        scoreboardWinner = !this.state.xIsNext ? "X" : "O";
+      } else {
+        status = DEU_VELHA;
+        scoreboardWinner = DEU_VELHA;
+      }
     } else {
       status = `${
         this.state.xIsNext ? this.state.player1 : this.state.player2
       }, sua vez!`;
+
+      scoreboardWinner = null;
     }
 
     return (
@@ -99,7 +108,7 @@ export default class Game extends Component {
             <Scoreboard
               player1={this.state.player1}
               player2={this.state.player2}
-              winner={winner}
+              winner={scoreboardWinner}
             />
             <div className="game-info">
               <div className="status">{status}</div>
